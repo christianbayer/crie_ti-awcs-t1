@@ -7,6 +7,7 @@
   top: 0;
   left: 0;
   right: 0;
+  z-index: 1000;
 }
 
 .header__logo {
@@ -19,20 +20,30 @@
 }
 
 .header__menu__item {
-  color: #737174;
+  color: var(--color-light-gray);
   text-decoration: none;
+  margin-right: 24px;
 }
 
 .header__menu__item--active {
-  color: #ffffff;
+  color: var(--color-white);
 }
 
 .header__menu__item svg {
-  fill: #737174;
+  fill: var(--color-light-gray);
 }
 
 .header__menu__item--active svg {
-  fill: #ffffff;
+  fill: var(--color-white);
+}
+
+.header__menu__item__icon,
+.header__menu__item__text {
+  vertical-align: middle;
+}
+
+.header__menu__item__icon {
+  margin-right: 8px;
 }
 
 .header__sign-in {
