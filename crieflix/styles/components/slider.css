@@ -6,6 +6,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 40px;
 }
 
 .slider__title {
@@ -30,4 +31,17 @@
 .slider__more__icon {
   fill: var(--color-primary);
   margin-left: 8px;
+}
+
+.slider__track {
+  display: flex;
+  overflow: auto hidden;
+  margin: 0 -70px;
+  padding: 0 70px;
+  scrollbar-width: none; /* Scrollbar fix for Firefox Browser */
+}
+
+.slider__track::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
