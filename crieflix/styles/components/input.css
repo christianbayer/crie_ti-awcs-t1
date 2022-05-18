@@ -6,10 +6,19 @@
   border-radius: var(--border-radius-default);
   border: none;
   color: var(--color-black);
+  line-height: 22px;
   font-size: var(--font-size-default);
   font-family: var(--font-family-primary);
 }
 
 .input::placeholder {
   color: var(--color-light-gray);
+}
+
+@media only screen and (max-width: 480px) {
+  .input {
+    width: 220px;
+    height: 48px;
+    font-size: 14px;
+  }
 }

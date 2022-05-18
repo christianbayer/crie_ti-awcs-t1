@@ -7,6 +7,10 @@
   margin-right: 16px;
 }
 
+.cover:last-child {
+  margin-right: 0;
+}
+
 .cover--large {
   width: 400px;
   height: 240px;
@@ -29,4 +33,23 @@
   left: 0;
   width: 100%;
   padding: 8px 12px;
+}
+
+@media only screen and (max-width: 480px) {
+  .cover {
+    width: 100px;
+    height: 135px;
+    margin-right: 12px;
+  }
+
+  .cover--large {
+    width: 270px;
+    height: 165px;
+  }
+
+  .cover__title {
+    font-size: 11px;
+    line-height: 12px;
+    padding: 4px;
+  }
 }
