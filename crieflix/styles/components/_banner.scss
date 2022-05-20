@@ -1,0 +1,48 @@
+@use "../base/variables";
+@use "../base/mixins";
+
+.banner {
+  height: 720px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-image: linear-gradient(to bottom, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.35) 40%, rgba(0, 0, 0, 0.9) 100%), url('../images/background.jpg');
+
+  @include mixins.mobile {
+    height: 510px;
+  }
+
+  &__content {
+    margin-left: 70px;
+
+    @include mixins.mobile {
+      margin-left: 16px;
+      padding-top: 80px;
+    }
+  }
+
+  &__title {
+    font-size: 65px;
+    line-height: 72px;
+    letter-spacing: -1.5px;
+    color: variables.$color-white;
+    margin-bottom: 20px;
+
+    @include mixins.mobile {
+      font-size: 24px;
+      line-height: 32px;
+    }
+  }
+
+  &__subtitle {
+    font-size: 20px;
+    line-height: 32px;
+    color: variables.$color-white;
+    margin-bottom: 40px;
+
+    @include mixins.mobile {
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+}

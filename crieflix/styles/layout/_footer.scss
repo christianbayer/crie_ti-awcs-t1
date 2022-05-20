@@ -1,0 +1,58 @@
+@use "../base/variables";
+@use "../base/mixins";
+
+.footer {
+  border-top: 5px solid variables.$color-darken-gray;
+  padding: 48px 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include mixins.mobile {
+    margin-top: 56px;
+    flex-direction: column;
+    padding: 32px 0 24px 0;
+  }
+
+  &__logo {
+    width: 170px;
+
+    @include mixins.mobile {
+      width: 100px;
+    }
+  }
+
+  &__nav {
+    @include mixins.mobile {
+      margin: 32px 0;
+    }
+
+    &__link {
+      color: variables.$color-white;
+      text-decoration: none;
+      font-size: 18px;
+      line-height: 24px;
+      border-right: 1px solid variables.$color-gray;
+      padding: 0 54px;
+
+      @include mixins.mobile {
+        font-size: 14px;
+        padding: 0 32px;
+      }
+
+      &:last-child {
+        border-right: none;
+      }
+    }
+  }
+
+  &__copy {
+    font-size: variables.$font-size-default;
+    line-height: 22px;
+    color: variables.$color-white;
+
+    @include mixins.mobile {
+      font-size: 14px;
+    }
+  }
+}

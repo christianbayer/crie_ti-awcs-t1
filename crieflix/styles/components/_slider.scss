@@ -1,0 +1,74 @@
+@use "../base/variables";
+@use "../base/mixins";
+
+.slider {
+  margin: 70px;
+
+  @include mixins.mobile {
+    margin: 32px 24px;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+
+    @include mixins.mobile {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__title {
+    color: variables.$color-white;
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: -0.5px;
+
+    @include mixins.mobile {
+      font-size: 20px;
+      line-height: 32px;
+    }
+  }
+
+  &__more {
+    color: variables.$color-white;
+    font-size: variables.$font-size-default;
+    line-height: 22px;
+    text-decoration: none;
+
+    @include mixins.mobile {
+      font-size: 14px;
+    }
+
+    &__text,
+    &__icon {
+      vertical-align: middle;
+    }
+
+    &__icon {
+      fill: variables.$color-primary;
+      margin-left: 8px;
+    }
+  }
+
+  &__track {
+    display: flex;
+    overflow: auto hidden;
+    margin: 0 -70px;
+    padding: 0 70px;
+
+    /* Scrollbar fix for Firefox Browser */
+    scrollbar-width: none;
+
+    @include mixins.mobile {
+      margin: 0 -24px;
+      padding: 0 24px;
+    }
+
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+  }
+}

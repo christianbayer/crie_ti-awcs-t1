@@ -1,0 +1,25 @@
+@use "../base/variables";
+@use "../base/mixins";
+
+.input {
+  height: 60px;
+  width: 360px;
+  padding: 16px 24px;
+  background: variables.$color-white;
+  border-radius: variables.$border-radius-default;
+  border: none;
+  color: variables.$color-black;
+  line-height: 22px;
+  font-size: variables.$font-size-default;
+  font-family: variables.$font-family-primary;
+
+  @include mixins.mobile {
+    width: 220px;
+    height: 48px;
+    font-size: 14px;
+  }
+
+  &::placeholder {
+    color: variables.$color-light-gray;
+  }
+}

@@ -1,0 +1,87 @@
+@use "../base/variables";
+@use "../base/mixins";
+
+.header {
+  margin: 40px 70px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+
+  @include mixins.mobile {
+    margin: 16px;
+    flex-wrap: wrap;
+  }
+
+  &__logo {
+    width: 170px;
+    margin-right: 64px;
+
+    @include mixins.mobile {
+      width: 100px;
+    }
+  }
+
+  &__menu {
+    display: inline-block;
+
+    @include mixins.mobile {
+      order: 3;
+      margin: 40px -16px 0 -16px;
+      padding: 0 16px;
+      display: flex;
+      overflow: auto hidden;
+      scrollbar-width: none;
+      /* Scrollbar fix for Firefox Browser */
+
+      &::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+      }
+    }
+
+    &__item {
+      $this: &;
+
+      color: variables.$color-light-gray;
+      text-decoration: none;
+      margin-right: 24px;
+
+      @include mixins.mobile {
+        flex-shrink: 0;
+      }
+
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &--active {
+        color: variables.$color-white;
+
+        #{$this}__icon {
+          fill: variables.$color-white;
+        }
+      }
+
+      &__icon,
+      &__text {
+        vertical-align: middle;
+      }
+
+      &__icon {
+        margin-right: 8px;
+        fill: variables.$color-light-gray;
+      }
+    }
+  }
+
+  &__sign-in {
+    margin-left: auto;
+    margin-right: 0;
+  }
+}
