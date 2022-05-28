@@ -1,0 +1,838 @@
+:root {
+  --color-white: #ffffff;
+  --color-pink: #FF0077;
+  --color-pink-light: #ffd8ea;
+  --color-blue: #0077ff;
+  --color-gray-light: #cecece;
+  --color-gray: #858585;
+  --color-black: #382c32;
+  --color-purple: #C10DFF;
+  --color-orange: #FF320D;
+  --color-green: #6cf515;
+}
+
+body {
+  color: var(--color-black);
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.5;
+}
+
+strong {
+  font-weight: 700;
+}
+
+/******************
+ *     Header     *
+ ******************/
+.header {
+  height: 90px;
+  background-color: var(--color-white);
+  overflow: hidden;
+  -webkit-box-shadow: 0 -10px 50px rgb(0 0 0 / 20%);
+  box-shadow: 0 -10px 50px rgb(0 0 0 / 20%);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.header__toggle,
+.header__toggle__checkbox {
+  display: none;
+}
+
+.header__logo {
+  height: 50px;
+}
+
+.menu {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu__item {
+  color: var(--color-black);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 15px;
+  height: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: .5s color ease;
+  box-sizing: border-box;
+}
+
+.menu__item:last-of-type {
+  margin-right: unset;
+}
+
+.menu__item--active {
+  background-color: var(--color-pink);
+  color: var(--color-white);
+}
+
+.menu__item:not(.menu__item--active):hover {
+  color: var(--color-pink);
+}
+
+/*******************
+ *     Content     *
+ *******************/
+.main {
+  margin-top: 90px;
+}
+
+/******************
+ *     Footer     *
+ ******************/
+.footer {
+  background-color: var(--color-pink);
+  color: var(--color-white);
+  padding: 80px 0 40px 0;
+}
+
+.footer__row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.footer__logo {
+  height: 40px;
+  margin-bottom: 40px;
+}
+
+.footer__address {
+  color: var(--color-pink-light);
+}
+
+.footer__copy {
+  margin-top: 60px;
+  width: 100%;
+  text-align: center;
+  color: var(--color-pink-light);
+  font-size: 14px;
+}
+
+.footer__copy::before {
+  content: "";
+  border-top: 1px solid var(--color-pink-light);
+  width: 100%;
+  display: block;
+  opacity: .3;
+  margin-bottom: 20px;
+}
+
+.footer__title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.footer__left,
+.footer__center,
+.footer__right {
+  flex: 0 0 33.333333%
+}
+
+.footer a {
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer__left {
+  text-align: left;
+}
+
+.footer__center {
+  text-align: center;
+}
+
+.footer__right {
+  text-align: right;
+}
+
+.business-hours {
+  color: var(--color-pink-light);
+}
+
+.social-links__link {
+  display: inline-block;
+  font-size: 1.5rem;
+  color: var(--color-white);
+  margin-left: 20px;
+  transition: .5s all ease;
+}
+
+.social-links__link:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+
+
+/***********************
+ *     Home banner     *
+ ***********************/
+.banner__image {
+  width: 100%;
+  height: 800px;
+  object-fit: cover;
+}
+
+@media (max-width: 1366px) {
+  .banner__image {
+    height: 600px;
+  }
+}
+
+
+/*************************
+ *     Home services     *
+ *************************/
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 60px 0 20px 0;
+  text-align: center;
+}
+
+.services__wrapper {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  height: 100%;
+}
+
+.service {
+  flex: 1 1 25%;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.service__icon {
+  color: var(--color-pink);
+  font-size: 4rem;
+  text-align: center;
+  margin: 0 0 20px 0;
+  transition: .5s all ease;
+}
+
+.service:hover .service__icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.service__name {
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--color-pink);
+  margin-bottom: 10px;
+}
+
+.service__description {
+  color: var(--color-gray);
+}
+
+/*******************
+ *     Company     *
+ *******************/
+.company {
+  background-color: var(--color-blue);
+  margin: 80px 0;
+  padding: 80px 0;
+  color: #ffffff;
+}
+
+.company__logo {
+  height: 50px;
+  margin-bottom: 20px;
+}
+
+/*************************
+ *     Home products     *
+ *************************/
+.products-page {
+  padding: 80px 0;
+}
+
+.products__wrapper {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  height: 100%;
+  flex-wrap: wrap;
+  margin: -10px;
+}
+
+.products__more {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 80px;
+}
+
+.product {
+  flex: 0 0 calc(16.6666666667% - 20px);
+  background-color: var(--color-white);
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  transition: .5s border ease;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.product:hover {
+  border: 1px solid var(--color-gray-light);
+}
+
+.product:hover .product__image {
+  opacity: .5;
+}
+
+.product__image {
+  transition: .5s opacity ease;
+}
+
+.product__image img {
+  max-width: 100%;
+}
+
+.product__name {
+  font-weight: 500;
+  margin-top: 10px;
+  font-size: 14px;
+  color: var(--color-gray);
+}
+
+.product__price {
+  padding-top: 10px;
+  margin-top: auto;
+  margin-bottom: 0;
+  color: var(--color-pink);
+  font-weight: 600;
+}
+
+
+
+/********************
+ *     Services     *
+ ********************/
+.service__wrapper {
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+.service__wrapper.even {
+  flex-direction: row-reverse;
+}
+
+.service__image {
+  flex: 0 0 auto;
+  width: 40%;
+  height: 100%;
+  display: inline-block;
+}
+
+.service__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.service__info {
+  width: 720px;
+  margin-left: 0;
+  margin-right: auto;
+  display: inline-block;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+.service__wrapper.even .service__info {
+  text-align: right;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.service__wrapper .service__name {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.service__wrapper .service__headline {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.hotel .service__name,
+.hotel .service__headline,
+.daycare .service__name,
+.daycare .service__headline,
+.pick-up .service__name,
+.pick-up .service__headline,
+.delivery .service__name,
+.delivery .service__headline,
+.drugstore .service__name,
+.drugstore .service__headline,
+.medical-center .service__name,
+.medical-center .service__headline {
+  color: var(--color-white);
+}
+
+.hotel .service__description,
+.daycare .service__description,
+.pick-up .service__description,
+.delivery .service__description,
+.drugstore .service__description,
+.medical-center .service__description {
+  color: var(--color-white);
+  opacity: .8;
+}
+
+.medical-center {
+  background-color: var(--color-pink);
+}
+
+.drugstore {
+  background-color: var(--color-blue);
+}
+
+.delivery {
+  background-color: var(--color-orange);
+}
+
+.pick-up {
+  background-color: var(--color-purple);
+}
+
+.daycare {
+  background-color: var(--color-green);
+}
+
+.hotel {
+  background-color: var(--color-black);
+}
+
+.hotel img {
+  object-position: bottom;
+}
+
+
+/*****************
+ *     About     *
+ *****************/
+.about {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  padding: 80px 0;
+}
+
+.about__image {
+  display: block;
+  width: 33.3333%;
+  flex: 0 0 auto;
+}
+
+.about__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about__info {
+  padding-left: 40px;
+  flex: 1 1 auto;
+}
+
+.about__contact {
+  margin-top: 40px;
+}
+
+.about .section-title,
+.products-page .section-title,
+.contact .section-title {
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+/*******************
+ *     Contact     *
+ *******************/
+
+.contact {
+  padding: 80px 0;
+}
+
+.contact .container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.contact__form {
+  display: block;
+  width: 66.666%;
+  padding-right: 40px;
+}
+
+.contact__group {
+  margin-bottom: 10px;
+}
+
+.contact__info__title {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 2px;
+  color: var(--color-gray);
+}
+
+.contact__info__link {
+  text-decoration: none;
+  color: var(--color-pink);
+  font-weight: 500;
+}
+
+.contact__iframe {
+  border: none;
+  width: 100%;
+  height: 260px;
+  display: block;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 500;
+  font-size: 14px;
+  margin-bottom: 2px;
+  color: var(--color-gray);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  display: block;
+  width: 100%;
+  background-color: var(--color-white);
+  box-sizing: border-box;
+  min-height: 40px;
+  border: 1px solid var(--color-gray-light);
+  border-radius: 5px;
+  box-shadow: none;
+  outline: 2px solid transparent;
+  transition: .5s all ease;
+  padding: 10px;
+  font-size: 16px;
+  color: var(--color-black);
+  font-weight: 400;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.form-group select {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 16px 12px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: 2px solid var(--color-pink-light);
+}
+
+
+/*******************
+ *     Helpers     *
+ *******************/
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.button {
+  display: inline-block;
+  background-color: var(--color-pink);
+  color: var(--color-white);
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px 40px;
+  border-radius: 10px;
+  border: none;
+  line-height: 1.25;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+p {
+  margin: 1rem 0;
+}
+
+@media only screen and (max-width: 480px) {
+
+  /******************
+   *     Header     *
+   ******************/
+  .header {
+    height: 60px;
+  }
+
+  .header .container {
+    justify-content: center;
+    background-color: var(--color-white );
+  }
+
+  .header__toggle {
+    display: block;
+    position: absolute;
+    left: 20px;
+  }
+
+  .header__toggle__checkbox:checked ~ .menu {
+    transform: translateX(0);
+  }
+
+  .header__logo {
+    height: 40px;
+  }
+
+  .menu {
+    position: fixed;
+    z-index: -5;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--color-white);
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 60px;
+    transform: translateX(-100%);
+    transition: .5s transform ease-out;
+  }
+
+  .menu__item {
+    height: auto;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .main {
+    margin-top: 60px;
+  }
+
+  /******************
+   *     Footer     *
+   ******************/
+  .footer {
+    padding: 40px 0 20px 0;
+  }
+
+  .footer .container {
+    padding: 0;
+  }
+
+  .footer__logo {
+    height: 30px;
+    margin-bottom: 20px;
+  }
+
+  .footer__row {
+    flex-direction: column;
+  }
+
+  .footer__logo,
+  .footer__left,
+  .footer__right {
+    padding-left: 40px;
+    padding-right: 40px;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  .footer__center {
+    display: none;
+  }
+
+  .footer__right {
+    margin-top: 20px;
+  }
+
+  .footer__title {
+    display: none;
+  }
+
+  .footer__copy {
+    margin-top: 30px;
+  }
+
+  /***********************
+   *     Home banner     *
+   ***********************/
+  .banner__image {
+    height: 260px;
+  }
+
+  /*************************
+   *     Home services     *
+   *************************/
+  .section-title {
+    font-size: 1.5rem;
+    margin: 40px 0 20px 0;
+    text-align: center;
+  }
+
+  .services__wrapper {
+    flex-wrap: wrap;
+  }
+
+  .service {
+    flex: 1 1 100%;
+    padding: 20px 0;
+  }
+
+  .service__icon {
+    font-size: 3rem;
+    margin: 0 0 10px 0;
+  }
+
+  /*******************
+   *     Company     *
+   *******************/
+  .company {
+    margin: 40px 0;
+    padding: 40px 0;
+  }
+
+  .company__logo {
+    height: 40px;
+    margin-bottom: 10px;
+  }
+
+  /*************************
+   *     Home products     *
+   *************************/
+  .product {
+    flex: 0 0 calc(50% - 20px);
+  }
+
+  .products-page {
+    padding: 40px 0;
+  }
+
+  /*****************
+   *     About     *
+   *****************/
+  .about {
+    flex-direction: column;
+  }
+
+  .about__info {
+    padding: 40px 0;
+  }
+
+  .about__contact {
+    margin-top: 20px;
+  }
+
+  .about__image {
+    width: calc(100% + 80px);
+    height: 260px;
+    margin: 0 -40px;
+  }
+
+  /********************
+   *     Services     *
+   ********************/
+  .service__wrapper {
+    height: unset;
+    flex-direction: column;
+  }
+
+  .service__wrapper.even {
+    flex-flow: column;
+  }
+
+  .service__wrapper.even .service__info {
+    text-align: left;
+  }
+
+  .service__image {
+    width: 100%;
+    height: 200px;
+  }
+
+  .service__info {
+    width: 100%;
+    margin: 20px 0;
+  }
+
+  /*****************
+   *     About     *
+   *****************/
+  .contact {
+    padding: 40px 0;
+  }
+
+  .contact .container {
+    flex-direction: column;
+  }
+
+  .contact__form {
+    width: 100%;
+    padding-right: 0;
+  }
+
+  .contact__info {
+    margin-top: 40px;
+  }
+
+  .contact__iframe {
+    border: none;
+    width: calc(100% + 80px);
+    height: 260px;
+    margin: 0 -40px -40px -40px;
+  }
+
+  .contact__group:last-child {
+    margin-bottom: 0;
+  }
+
+  /*******************
+   *     Helpers     *
+   *******************/
+  .container {
+    padding: 0 40px;
+  }
+}

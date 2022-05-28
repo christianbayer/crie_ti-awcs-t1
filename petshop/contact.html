@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>pet&shop - Início</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" sizes="any">
+  <link rel="icon" type="image/png" href="assets/favicon.ico" sizes="any">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css" integrity="sha384-/frq1SRXYH/bSyou/HUp/hib7RVN1TawQYja658FEOodR/FQBKVqT9Ol+Oz3Olq5" crossorigin="anonymous" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <label for="menu-toggle" class="header__toggle" tabindex="0">
+        <i class="fa-solid fa-bars"></i>
+      </label>
+      <input id="menu-toggle" class="header__toggle__checkbox" type="checkbox">
+      <img class="header__logo" src="assets/logo-colored.svg" alt="pet&shop">
+      <nav class="menu">
+        <a href="index.html" class="menu__item">Home</a>
+        <a href="about.html" class="menu__item">Sobre</a>
+        <a href="products.html" class="menu__item">Produtos</a>
+        <a href="services.html" class="menu__item">Serviços</a>
+        <a href="contact.html" class="menu__item menu__item--active">Fale conosco</a>
+      </nav>
+    </div>
+  </header>
+  <main class="main">
+    <section class="contact">
+      <div class="container">
+        <h3 class="section-title">Fale conosco</h3>
+      </div>
+      <div class="container">
+        <form class="contact__form">
+          <div class="form-group">
+            <label for="name">Nome</label>
+            <input type="text" id="name" name="name">
+          </div>
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email">
+          </div>
+          <div class="form-group">
+            <label for="phone">Telefone</label>
+            <input type="tel" id="phone" name="phone">
+          </div>
+          <div class="form-group">
+            <label for="state">Estado</label>
+            <select id="state" name="state">
+              <option value="" selected>Selecione</option>
+              <option value="RS">Rio Grande do Sul</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="city">Cidade</label>
+            <select id="city" name="city">
+              <option value="" selected>Selecione</option>
+              <option value="RS">Lajeado</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Mensagem</label>
+            <textarea id="message" name="message" rows="5"></textarea>
+          </div>
+          <button class="button">Enviar</button>
+        </form>
+        <div class="contact__info">
+          <div class="contact__group">
+            <h4 class="contact__info__title">Horário de funcionamento</h4>
+            <div>
+              De Segunda a Sexta-feira das 9 às 19hs.<br>
+              Aos Sábados das 9 às 18hs.
+            </div>
+          </div>
+          <div class="contact__group">
+            <h4 class="contact__info__title">Telefone</h4>
+            <a class="contact__info__link" href="#">(00) 99999-9999</a><br>
+          </div>
+          <div class="contact__group">
+            <h4 class="contact__info__title">E-mail</h4>
+            <a class="contact__info__link" href="#">contato@petshop.com.br</a><br>
+          </div>
+          <div class="contact__group">
+            <h4 class="contact__info__title">Endereço</h4>
+            <a class="contact__info__link" href="#">Estrada sem nome, 1234, Sala 0, Bairro - Cidade / UF - 12345-678</a><br>
+          </div>
+          <div class="contact__group">
+            <h4 class="contact__info__title">Localização</h4>
+            <iframe class="contact__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3474.408124232604!2d-51.95435148439565!3d-29.446090610664932!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951c618a53718fdf%3A0x70b8ec4ae586d3b8!2sUnivates!5e0!3m2!1spt-BR!2sbr!4v1650592380876!5m2!1spt-BR!2sbr" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__row">
+        <img class="footer__logo" src="assets/logo-white.svg" alt="pet&shop">
+      </div>
+      <div class="footer__row">
+        <div class="footer__left">
+          <div class="footer__title">Contato</div>
+          <address class="footer__address">
+            Estrada sem nome, 1234, Sala 0<br/>
+            Bairro - Cidade / UF<br/>
+            12345-678<br/>
+            <a href="#">(00) 99999-9999</a><br>
+            <a href="#">contato@petshop.com.br</a>
+          </address>
+        </div>
+        <div class="footer__center">
+          <div class="footer__title">Horário de funcionamento</div>
+          <div class="business-hours">
+            De Segunda a Sexta-feira das 9 às 19hs.<br>
+            Aos Sábados das 9 às 18hs.
+          </div>
+        </div>
+        <div class="footer__right">
+          <div class="footer__title">Siga-nos</div>
+          <nav class="social-links">
+            <a class="social-links__link" href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a class="social-links__link" href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a class="social-links__link" href="#"><i class="fa-brands fa-tiktok"></i></a>
+            <a class="social-links__link" href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a class="social-links__link" href="#"><i class="fa-brands fa-youtube"></i></a>
+          </nav>
+        </div>
+      </div>
+      <div class="footer__row">
+        <div class="footer__copy">&copy; 2022 pet&shop | Todos os direitos reservados. Desenvolvido por <a href="#">Crie_TI</a></div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
